@@ -1,17 +1,27 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "proxy-pricing-checkout-kt",
+  "description": "> Project description",
+  "author": "Keenan Thomson",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteminds/proxy-pricing-checkout-kt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/byteminds/proxy-pricing-checkout-kt/issues"
+  },
+  "homepage": "https://github.com/byteminds/proxy-pricing-checkout-kt#readme"
 }

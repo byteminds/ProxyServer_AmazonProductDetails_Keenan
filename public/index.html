@@ -2,11 +2,31 @@
 <html>
   <head>
     <link rel="icon" href="Amazon.ico" />
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: rgb(255,255,255);
+        padding: 10px;
+      }
+
+      .grid-item {
+        background-color: rgb(255,255,255);
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        padding: 20px;
+        /* font-size: 30px; */
+        /* text-align: center; */
+      }
+      </style>
   </head>
   <body>
-    <div id="pricingApp"></div>
-    <div id="app"></div>
-    <script src='http://localhost:3004/bundle.js'></script>
-    <script src='http://localhost:3003/bundle.js'></script>
+    <div class="grid-container">
+      <div class="grid-item" id="app"></div>
+      <div class="grid-item" id="pricingApp"></div>
+      <div class="grid-item" id="root"></div>
+    </div>
+    <script src='http://localhost:3004/2/bundle.js'></script>
+    <script src='http://localhost:3003/2/bundle.js'></script>
+    <script src='http://localhost:3001/2/bundle.js'></script>
   </body>
 </html>

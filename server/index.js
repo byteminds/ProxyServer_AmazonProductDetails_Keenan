@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const port = 3000;
 const axios = require('axios');
-// const cors = require('cors');
 
 let app = express();
 
@@ -24,8 +23,8 @@ app.use('/api/:productId/summary', (req, res) => {
 
 
 // get product description component and fonts
-app.use('/api/:id', (req, res) => {
-  const url = `http://localhost:3003/api/${req.params.id}`;
+app.use('/descriptionAPI/:id', (req, res) => {
+  const url = `http://localhost:3003/descriptionAPI/${req.params.id}`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 

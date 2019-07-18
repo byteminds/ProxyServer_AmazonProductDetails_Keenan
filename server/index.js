@@ -9,7 +9,7 @@ let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/:id', express.static(path.join(__dirname, '../public')));
 
-//get product reviews component ****DEDUPE /api/id route causing collision(?)******
+//get product reviews component
 app.use('/api/:productId', (req, res) => {
   const url = `http://localhost:3001/api/${req.params.productId}`;
   axios.get(url).then((response) => {res.send(response.data)});

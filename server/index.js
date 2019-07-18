@@ -21,7 +21,6 @@ app.use('/api/:productId/summary', (req, res) => {
 });
 
 
-
 // get product description component and fonts
 app.use('/descriptionAPI/:id', (req, res) => {
   const url = `http://localhost:3003/descriptionAPI/${req.params.id}`;
@@ -31,7 +30,6 @@ app.use('/descriptionAPI/:id', (req, res) => {
 app.use('/:id/font/:url', (req, res) => {
   const url = `http://localhost:3003/${req.params.id}/font/${req.params.url}`;
   axios.get(url).then((response) => {res.send(response.data)});
-  console.log(`fonts sent!`)
 });
 
 

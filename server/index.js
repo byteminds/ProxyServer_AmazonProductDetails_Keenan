@@ -35,7 +35,7 @@ app.use('/:id/font/:url', (req, res) => {
 
 // get pricing component
 app.get('/api/:id', (req, res) => {
-  const url = `http://localhost:3004/pricingAPI/${req.params.id}`;
+  const url = `http://ec2-3-17-206-111.us-east-2.compute.amazonaws.com/pricingAPI/${req.params.id}`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 

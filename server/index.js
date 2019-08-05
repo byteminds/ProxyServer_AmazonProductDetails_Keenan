@@ -11,24 +11,24 @@ app.use('/:id', express.static(path.join(__dirname, '../public')));
 
 //get product reviews component
 app.use('/api/:productId', (req, res) => {
-  const url = `http://localhost:3001/api/${req.params.productId}`;
+  const url = `http://ec2-34-201-59-177.compute-1.amazonaws.com/api/${req.params.productId}`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 
-app.use('/api/:productId/summary', (req, res) => {
-  const url = `http://localhost:3001/api/${req.params.productId}/summary`;
+app.use('/reviews/api/:productId', (req, res) => {
+  const url = `http://ec2-34-201-59-177.compute-1.amazonaws.com/api/${req.params.productId}/summary`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 
 
 // get product description component and fonts
-app.use('/descriptionAPI/:id', (req, res) => {
-  const url = `http://localhost:3003/descriptionAPI/${req.params.id}`;
+app.use('/descriptions/:id', (req, res) => {
+  const url = `http://ec2-54-67-53-174.us-west-1.compute.amazonaws.com/descriptions/${req.params.id}`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 
 app.use('/:id/font/:url', (req, res) => {
-  const url = `http://localhost:3003/${req.params.id}/font/${req.params.url}`;
+  const url = `http://ec2-54-67-53-174.us-west-1.compute.amazonaws.com/${req.params.id}/font/${req.params.url}`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 
